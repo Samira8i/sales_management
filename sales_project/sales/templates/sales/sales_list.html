@@ -1,0 +1,10 @@
+<h1>Список продаж</h1>
+<ul>
+  {% for sale in sales %}
+  <li>
+    {{ sale.sale_date }} - {{ sale.buyer.first_name }} купил {{
+    sale.product.name }} у {{ sale.seller.first_name }} за {{ sale.amount }}.
+  </li>
+  <li><a href="{% url 'add_sale' %}">добавить продажу</a></li>
+  {% endfor %}
+</ul>

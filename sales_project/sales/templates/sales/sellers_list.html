@@ -1,0 +1,10 @@
+<h1>Список продавцов</h1>
+<ul>
+  {% for seller in sellers %}
+  <li>
+    {{ seller.first_name }} {{ seller.last_name }} - {{ seller.phone }} - {{
+    seller.email }} - {{ seller.hire_date }} - {{ seller.get_position_display }}
+  </li>
+  <li><a href="{% url 'add_seller' %}">добавить продавца</a></li>
+  {% endfor %}
+</ul>

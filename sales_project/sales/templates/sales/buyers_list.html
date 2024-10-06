@@ -1,0 +1,10 @@
+<h1>Список покупателей</h1>
+<ul>
+  {% for buyer in buyers %}
+  <li>
+    {{ buyer.first_name }} {{ buyer.last_name }} - {{ buyer.phone }} - {{
+    buyer.email }}
+  </li>
+  <li><a href="{% url 'add_buyer' %}">добавить покупателя</a></li>
+  {% endfor %}
+</ul>

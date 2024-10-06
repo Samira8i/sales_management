@@ -1,0 +1,7 @@
+<h1>Список товаров</h1>
+<ul>
+  {% for product in products %}
+  <li>{{ product.name }} - {{ product.description }}</li>
+  {% endfor %}
+  <li><a href="{% url 'add_product' %}">добавить товар</a></li>
+</ul>
